@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #0D0D0D;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    min-height: 100vh;
+}
+
+.top-bar {
+    background: #0D0D0D;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    padding: 10px 10%;
+    gap: 15px;
+}
+
+.top-bar p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+}
+
+.top-bar p span,
+.top-bar p i {
+    color: #F2F2F2;
+}
+
+.top-bar p span {
+    font-weight: 200;
+}
+
+.top-bar p i {
+    font-weight: 400;
+}
+
+.menu-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background: #F2F2F2;;
+}
+
+.menu-bar #logo img {
+    width: 75px;
+}
+
+.menu-bar #menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-bar .menu-item a {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-weight: 800;
+    color: #0D0D0D;
+    transition: color 0.3s ease;
+}
+
+.menu-bar .menu-item.active a {
+    color: #6D86A6;
+}
+
+.menu-bar .menu-item:hover a {
+    color: #6D86A6;
+}
+
+#search-bar-bag-and-user-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+}
+
+#search-bar {
+    position: relative;
+}
+
+#search-bar span {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-weight: 100;
+}
+
+#search-bar input {
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc
+}
+
+#search-bar-bag-and-user-icon .icon {
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 300;
+    background: #e6e5e5;
+    transition: all .3s ease;
+}
+
+#search-bar-bag-and-user-icon .icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+#product-details #categoria {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#product-details #nome {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: 10px;
+    color: #6D86A6;
+}
+
+#product-details #descricao {
+    font-size: 14px;
+    font-weight: 100;
+    margin: 10px 0;
+}
+
+#product-details #preco {
+    font-size: 25px;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 15px 20px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.btn.bordered {
+    border: 1px solid #ccc;
+}
+
+.btn.primary {
+    background: #0D0D0D;
+    color: #F2F2F2;
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+#nosso-forte {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+#nosso-forte > h1 {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+#nosso-forte > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+#nosso-forte article {
+    background-color: #F2F2F2;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nosso-forte article > span {
+    font-size: 60px;
+    font-weight: 200;
+}
+
+#produtos {
+    padding: 30px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#produtos > p {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+#produtos > h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+#produtos > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(4, 1fr); */
+}
+
+#produtos .produto {
+    display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+    background-color: #F2F2F2;
+    cursor: pointer;
+    padding: 15px 5px;
+    margin-right: 10px; margin-bottom: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+#produtos .produto > img {
+    width: 200px;
+    transition: all .3s ease;
+}
+
+#produtos .produto:hover > img {
+    transform: scale(1.2);
+}
+
+#produtos .produto:hover {
+    background-color: #ccc;
+    border: 1px solid #6D86A6;
+}
+
+#produtos .produto > div {
+    display: flex; flex-direction: column; justify-content: space-between; align-items: start;
+    padding: 0 20px;
+}
+
+#produtos .produto > div .nome {
+    font-size: 20px;
+    color: #0D0D0D;
+    font-weight: 100;
+}
+
+#produtos .produto > div .descricao,
+#produtos .produto > div .categoria {
+    color: #6b6b6b;
+}
+
+#produtos .produto > div .preco {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+#produtos .produto div.btns {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+
+#produtos .produto .btn {
+    padding: 15px 45px;
+}
+
+footer {
+    padding: 20px 10%;
+    display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+    margin-top: 50px;
+    border-top: 1px solid #F2F2F2;
+}
+
+footer ul {
+    display: flex; flex-direction: row; justify-content: start; align-items: center; gap: 10px;
+}
+
+
+/* PRODUTO */
+#produto {
+    
+    display: flex; flex-direction: row; justify-content: start; align-items: center;
+}
+
+#produto > div {
+    display: flex; flex-direction: column; justify-content: center; align-items: start;
+}
+
+#produto > div h3 {
+    font-weight: 100;
+}
+
+#produto > div h1 {
+    font-size: 50px;
+    font-weight: 100;
+    color: #6D86A6;
+    text-transform: uppercase;
+}
+
+#produto > div p {
+    font-weight: 100;
+}
+
+#produto > div span {
+    font-weight: 400;
+    font-size: 40px;
+    margin: 20px 0;
+}
